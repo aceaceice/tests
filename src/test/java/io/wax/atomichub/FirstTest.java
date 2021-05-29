@@ -51,24 +51,14 @@ public class FirstTest {
         System.out.println(firstPrice);
     }
 
-    @Test
-    public void detailsTest(){
-        driver.get("https://wax.atomichub.io/market");
-        driver.findElement(By.xpath("/html/body/div[3]/div/div/div/div[2]/button[1]")).click();
-        WebDriverWait wait = new WebDriverWait(driver, 3);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"root\"]/div[2]/main/div/div[2]/div[4]/div/div[1]/div[2]/div[3]/a/button")));
-        driver.findElement(By.xpath("//*[@id=\"root\"]/div[2]/main/div/div[2]/div[4]/div/div[1]/div[2]/div[3]/a/button")).click();
-        WebDriverWait waitForItems = new WebDriverWait(driver, 3);
-        waitForItems.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"root\"]/div[2]/main/div/div[3]/div[1]/div[2]/div/div[1]/div[2]/div[3]/div[1]")));
-        driver.findElement(By.xpath("//*[@id=\"root\"]/div[2]/main/div/div[3]/div[1]/div[2]/div/div[1]/div[2]/div[3]/div[1]"));
-    }
 
-//    @Test
-//    public void txTest(){
-//        driver.get("https://wax.atomichub.io/");
-//        driver.findElement(By.xpath("/html/body/div[3]/div/div/div/div[2]/button[1]")).click();
-//        driver.findElement(By.xpath("//*[@id=\"root\"]/div[2]/main/div/div[2]/div/div/div/div[3]/table/tbody/tr/td[2]"));
-//    }
+
+    @Test
+    public void txTest(){
+        driver.get("https://wax.atomichub.io/");
+        driver.findElement(By.xpath("/html/body/div[3]/div/div/div/div[2]/button[1]")).click();
+        driver.findElement(By.xpath("//*[@id=\"root\"]/div[2]/main/div/div[2]/div/div/div/div[3]/table/tbody/tr/td[2]"));
+    }
 
     @After
     public void close(){
